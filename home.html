@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>match schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="hero-section">
+        <div class="logo">
+            <img src="https://www.tnfsh.tn.edu.tw/images/logo.png" onclick="window.open('https://www.tnfsh.tn.edu.tw/home.aspx', '_blank')" class="logo-image">
+            <div id="live-clock" class="clock-text">00:00:00</div>
+        </div>
+
+        <div class="auth-buttons">
+            <!--
+            <div
+                id="sign-up" class="sign-up-button"
+                onclick="turntosignup()"
+                onmouseenter="changecolor();"
+                onmouseleave="changebackcolor();"
+            >Sign Up</div>
+            -->
+
+            <div
+                id="sign-in" class="sign-in-button"
+                onclick="turntosignin()"
+                onmouseenter="changecolor2();"
+                onmouseleave="changebackcolor2();"
+            >Sign In</div>
+
+        </div>
+    </header>
+
+    <main id="match-container">
+        <div class="loading"></div>
+    </main>
+
+    <div class="list">
+        <div class="court-block">   
+            <h3>Court A <span id="home-type-A" style="font-size: small; color: #ddd;"></span></h3>
+            <div class="every-match">
+                <div id="home-time-A" style="font-size: small; color: #ffeb3b;">--:--</div>
+        
+                <div id="home-p1-A" style="font-size: large;">first</div>
+                <div style="margin: 5px 0;">vs</div>
+                <div id="home-p2-A" style="font-size: large;">second</div>
+                
+                <div id="home-p1-2-A" style="display: none;"></div>
+                <div id="home-p2-2-A" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="court-block">
+            <h3>Court B <span id="home-type-B" style="font-size: small; color: #ddd;"></span></h3>
+            <div class="every-match">
+                <div id="home-time-B" style="font-size: small; color: #ffeb3b;">--:--</div>
+        
+                <div id="home-p1-B" style="font-size: large;">first</div>
+                <div style="margin: 5px 0;">vs</div>
+                <div id="home-p2-B" style="font-size: large;">second</div>
+                
+                <div id="home-p1-2-B" style="display: none;"></div>
+                <div id="home-p2-2-B" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="court-block">
+            <h3>Court C <span id="home-type-C" style="font-size: small; color: #ddd;"></span></h3>
+            <div class="every-match">
+                <div id="home-time-C" style="font-size: small; color: #ffeb3b;">--:--</div>
+        
+                <div id="home-p1-C" style="font-size: large;">first</div>
+                <div style="margin: 5px 0;">vs</div>
+                <div id="home-p2-C" style="font-size: large;">second</div>
+                
+                <div id="home-p1-2-C" style="display: none;"></div>
+                <div id="home-p2-2-C" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="court-block">
+            <h3>Court D <span id="home-type-D" style="font-size: small; color: #ddd;"></span></h3>
+            <div class="every-match">
+                <div id="home-time-D" style="font-size: small; color: #ffeb3b;">--:--</div>
+        
+                <div id="home-p1-D" style="font-size: large;">first</div>
+                <div style="margin: 5px 0;">vs</div>
+                <div id="home-p2-D" style="font-size: large;">second</div>
+                
+                <div id="home-p1-2-D" style="display: none;"></div>
+                <div id="home-p2-2-D" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="court-block">
+            <h3>Court E <span id="home-type-E" style="font-size: small; color: #ddd;"></span></h3>
+            <div class="every-match">
+                <div id="home-time-E" style="font-size: small; color: #ffeb3b;">--:--</div>
+        
+                <div id="home-p1-E" style="font-size: large;">first</div>
+                <div style="margin: 5px 0;">vs</div>
+                <div id="home-p2-E" style="font-size: large;">second</div>
+                
+                <div id="home-p1-2-E" style="display: none;"></div>
+                <div id="home-p2-2-E" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="court-block">
+            <h3>Court F <span id="home-type-F" style="font-size: small; color: #ddd;"></span></h3>
+            <div class="every-match">
+                <div id="home-time-F" style="font-size: small; color: #ffeb3b;">--:--</div>
+        
+                <div id="home-p1-F" style="font-size: large;">first</div>
+                <div style="margin: 5px 0;">vs</div>
+                <div id="home-p2-F" style="font-size: large;">second</div>
+                
+                <div id="home-p1-2-F" style="display: none;"></div>
+                <div id="home-p2-2-F" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="court-block">
+            <h3>Court G <span id="home-type-G" style="font-size: small; color: #ddd;"></span></h3>
+            <div class="every-match">
+                <div id="home-time-G" style="font-size: small; color: #ffeb3b;">--:--</div>
+        
+                <div id="home-p1-G" style="font-size: large;">first</div>
+                <div style="margin: 5px 0;">vs</div>
+                <div id="home-p2-G" style="font-size: large;">second</div>
+                
+                <div id="home-p1-2-G" style="display: none;"></div>
+                <div id="home-p2-2-G" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="court-block">
+            <h3>Court H <span id="home-type-H" style="font-size: small; color: #ddd;"></span></h3>
+            <div class="every-match">
+                <div id="home-time-H" style="font-size: small; color: #ffeb3b;">--:--</div>
+        
+                <div id="home-p1-H" style="font-size: large;">first</div>
+                <div style="margin: 5px 0;">vs</div>
+                <div id="home-p2-H" style="font-size: large;">second</div>
+                
+                <div id="home-p1-2-H" style="display: none;"></div>
+                <div id="home-p2-2-H" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
