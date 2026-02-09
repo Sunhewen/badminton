@@ -34,7 +34,6 @@ async function handleRegister() {
     alert("require sent！");
 }
 
-// --- 登入功能 ---
 async function handleLogin() {
     const user = document.getElementById('login-username').value;
     const pass = document.getElementById('login-password').value;
@@ -51,7 +50,7 @@ async function handleLogin() {
     console.log(pass);
     const result = await response.text();
     console.log(result);
-    if (result === "login successfully") {
+    if (result === "登入成功") {
         alert("login successfully！");
         window.location.href = "./admin.html"; 
     } else {
@@ -256,4 +255,5 @@ function checkTimeAlert(courtLetter, matchTime) {
         timeDisplay.style.fontWeight = "bold";
         timeDisplay.innerHTML = `Next: ${matchTime}`;
     }
+
 }
