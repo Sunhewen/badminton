@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+<script>
+if (document.referrer === "" || !document.referrer.includes("signin.html")) {
+    alert("Access Denied!");
+    window.location.href = "./home.html";
+}
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -214,4 +220,5 @@
     
 </body>
 </html>
+
 
